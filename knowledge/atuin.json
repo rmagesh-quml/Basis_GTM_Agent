@@ -1,0 +1,76 @@
+{
+  "product": {
+    "name": "Atuin Desktop",
+    "one_liner": "Turn your team's shell scripts and runbooks into executable, version-controlled docs that stay current because they actually run.",
+    "target_team_size": [15, 75],
+    "features": [
+      "Executable runbook blocks: mix shell commands, SQL queries, HTTP calls, and live Prometheus charts in a single document that runs top-to-bottom",
+      "Serial run-all with pause blocks: click Play to execute multi-step deploys sequentially, with human-confirmation checkpoints before destructive steps",
+      "Atuin Hub team sync: share shell history and runbooks across the org with per-user and per-team granular permissions, backed by end-to-end encryption",
+      "Jinja-style templating with shell history autocomplete: parameterize runbooks using variables, with autocomplete drawn from your team's real command history",
+      "Git-native CRDT workspaces: local-first, offline-capable co-editing that commits to Git — runbooks live in version control alongside the code they operate on"
+    ],
+    "pain_to_feature_map": {
+      "runbook_sprawl": "Git-native CRDT workspaces: one canonical, version-controlled location per runbook — no more Confluence page vs. Notion doc vs. Slack thread debate",
+      "deploy_chaos": "Serial run-all with pause blocks: reproducible deploy sequences with mandatory human checkpoints replace ad-hoc copy-paste from Slack",
+      "onboarding_debt": "Executable getting-started runbooks: new engineers run their first deploy on day one from a document that autocompletes from real team command history",
+      "script_rot": "Executable blocks ensure documentation is always tested — a runbook that hasn't run recently fails loudly, making rot visible before incidents expose it",
+      "shell_history_not_shared": "Atuin Hub team sync: every engineer's shell history is searchable by the team, surfacing the five commands that only one person knew"
+    }
+  },
+  "icp": {
+    "team_size_range": "15–75 engineers",
+    "stack_signals": [
+      "Kubernetes or ECS for container orchestration",
+      "PostgreSQL or MySQL with manual migration runbooks",
+      "Terraform or Pulumi for infrastructure-as-code",
+      "GitHub Actions or CircleCI CI/CD pipelines",
+      "AWS, GCP, or Azure with multiple environments (staging, prod)",
+      "Bash and Python scripts owned by the platform or infra team",
+      "Prometheus or Grafana for observability"
+    ],
+    "pain_keywords": [
+      "runbook rot",
+      "tribal knowledge",
+      "knowledge silos",
+      "deploy fear",
+      "slow onboarding",
+      "incident chaos",
+      "copy-paste deploys",
+      "who knows how to restart X",
+      "outdated wiki",
+      "five commands only one person knows"
+    ],
+    "anti_signals": [
+      "No-code or low-code teams with no terminal ownership",
+      "Pure SaaS teams with zero infra footprint (PaaS-only, Heroku-button deploys)",
+      "Large enterprises with dedicated change-management and ITSM ticketing (ServiceNow gates every deploy)",
+      "Teams where all operational runbooks are already fully automated in CI/CD with zero manual steps",
+      "Organizations mandating Windows-only developer environments"
+    ],
+    "role_targets": [
+      "DevOps / Infrastructure engineer (primary buyer and champion)",
+      "Platform engineer or SRE (day-to-day user, defines runbook standards)",
+      "Backend engineering lead (approves tooling, feels onboarding pain directly)",
+      "Engineering manager (budget holder, cares about MTTR and onboarding ramp)"
+    ],
+    "company_stage": "Seed through Series C; sweet spot is Series A–B scale-ups growing from 15 to 75 engineers where tribal knowledge debt is compounding faster than the team can document it"
+  },
+  "tone_rules": [
+    "Lead with the operational pain, never the feature — open with 'the five commands only one person knows' not 'our runbook editor'",
+    "Use their exact vocabulary: runbooks, playbooks, scripts, commands, deploys — never 'workflows', 'automations', or 'empowering your team'",
+    "Be concrete and specific — name the tool they're replacing (Confluence, Notion, Slack threads), not a generic 'documentation solution'",
+    "Developer-register: direct, no fluff, no buzzwords — write like a senior infra engineer Slacking a teammate, not a SaaS landing page",
+    "Respect their time: cold outreach subject lines under 8 words, body copy under 80 words, one ask per message"
+  ],
+  "competitors": {
+    "Confluence": "Passive document store — pages go stale the day they're written, there is no execution layer, and search surfaces the wrong version during an incident at 2 AM",
+    "Notion": "Beautiful but inert — you cannot run a database migration or a rolling deploy from a Notion page; it is a whiteboard, not an operator",
+    "internal wikis": "Zero accountability, no execution, and rot by design — nobody owns staleness, nobody is paged when a command no longer works, tribal knowledge migrates back to Slack within weeks",
+    "Retool runbooks": "Requires admin setup and a BI or ops-tools team to maintain; built for business operations workflows not terminal-native infra tasks; engineers don't live in it"
+  },
+  "sequences": {
+    "tier_a_id": "PLACEHOLDER_A",
+    "tier_b_id": "PLACEHOLDER_B"
+  }
+}
